@@ -7,28 +7,32 @@ export const actions: ActionTree<UserState, RootState> = {
   async getUsers(): Promise<User[]> {
     return [
       {
+        id: 1,
+        name: 'Brooklyn Craig',
+      },
+      {
         id: 2,
-        name: 'Nikito Nipongo',
+        name: 'Minnie Bell',
       },
       {
         id: 3,
-        name: 'Pamela Chu',
+        name: 'Celina Hansen',
       },
       {
         id: 4,
-        name: 'Juan Antonio Ortega Rejon De Todos Los Santos',
+        name: 'Ivan Cook',
       },
       {
         id: 5,
-        name: 'Antonio Benítez Fernández',
+        name: 'Naomi Adams',
       },
       {
         id: 6,
-        name: 'Antonio Benítez Fernández',
+        name: 'Herbert Hill',
       },
       {
         id: 7,
-        name: 'Antonio Benítez Fernández',
+        name: 'Kenzi Vasquez',
       },
     ];
   },

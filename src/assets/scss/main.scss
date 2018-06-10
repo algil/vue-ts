@@ -1,7 +1,7 @@
 .app {
   display: grid;
   grid-template-columns: 200px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: auto 1fr;
   background-color: lightgoldenrodyellow;
   height: 100vh;
   margin: 0 auto;
@@ -11,6 +11,7 @@
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .app-bar {
@@ -25,6 +26,20 @@ ul {
   }
 }
 
+.user-sidebar {
+  background-color: yellowgreen;
 
+  li {
+    border-bottom: 1px solid black;
+    padding: 1em;
+    cursor: pointer;
 
+    &:hover {
+      background-color: azure;
+    }
+  }
+}
 
+.main-content {
+  text-align: center;
+}

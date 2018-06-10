@@ -2,7 +2,7 @@
   <div class="app">
     <app-bar></app-bar>
     <router-view name="leftSidebar"></router-view>
-    <router-view></router-view>
+    <router-view class="main-content"></router-view>
   </div>
 </template>
 
