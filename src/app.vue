@@ -7,6 +7,21 @@
 </template>
 
 <script lang="ts">
+// import { Component, Prop, Vue } from 'vue-property-decorator';
+// import AppBar from './modules/core/components/app-bar.vue';
+
+// @Component({
+//   components: {
+//     AppBar,
+//   }
+// })
+// export default class App extends Vue {
+// }
+
+
+
+
+
 import Vue from 'vue';
 import AppBar from './modules/core/components/app-bar.vue';
 

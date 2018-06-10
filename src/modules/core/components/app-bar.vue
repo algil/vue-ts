@@ -10,29 +10,59 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+///////////////////////
+// NOT WORK
+//////////////////////
+
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import { State } from 'vuex-class';
+import User from '@/models/user';
 import AppBarItem from './app-bar-item.vue';
 
-export default {
-  name: 'app-bar',
+const namespace: string = 'users';
 
+@Component({
   components: {
     AppBarItem,
   },
+})
+export default class AppBar extends Vue {
+  @State('user', { namespace }) private user!: User;
 
-  data() {
-    return {
-      items: [
-        { link: '/', title: 'menu.users' },
-        { link: 'about', title: 'menu.about' },
-      ],
-    };
-  },
+  private items = [
+    { link: '/', title: 'menu.users' },
+    { link: 'about', title: 'menu.about' },
+  ];
+}
 
-  computed: {
-    user() {
-      return this.$store.state.users.user;
-    },
-  },
-};
+///////////////////////
+// WORK
+//////////////////////
+
+// import Vue from 'vue';
+// import AppBarItem from './app-bar-item.vue';
+
+// export default Vue.extend({
+//   name: 'app-bar',
+
+//   components: {
+//     AppBarItem,
+//   },
+
+//   data() {
+//     return {
+//       items: [
+//         { link: '/', title: 'menu.users' },
+//         { link: 'about', title: 'menu.about' },
+//       ],
+//     };
+//   },
+
+//   computed: {
+//     user() {
+//       return this.$store.state.users.user;
+//     },
+//   },
+// });
 </script>

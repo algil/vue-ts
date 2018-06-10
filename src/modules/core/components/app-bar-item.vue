@@ -3,7 +3,6 @@
     tag="li"
     :to="item.link"
     exact
-    active-class="active"
     class="app-bar-item"
     :title="$t(item.title)"
   >
