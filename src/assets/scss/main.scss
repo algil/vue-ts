@@ -1,0 +1,30 @@
+.app {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 100px 1fr;
+  background-color: lightgoldenrodyellow;
+  height: 100vh;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.app-bar {
+  grid-column: 1 / -1; 
+  background-color: aquamarine;
+}
+
+.app-bar-menu {
+  display: flex;
+  li {
+    margin: 10px;
+  }
+}
+
+
+
+
