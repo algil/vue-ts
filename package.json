@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve:electron",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service serve:electron",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "build:electron": "vue-cli-service build:electron",
@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.10",
-    "source-map-support": "^0.5.6",
     "vue": "^2.5.16",
     "vue-class-component": "^6.2.0",
     "vue-i18n": "^7.8.0",
@@ -34,13 +33,10 @@
     "@vue/test-utils": "^1.0.0-beta.18",
     "babel-core": "7.0.0-bridge.0",
     "electron": "^2.0.2",
-    "electron-builder": "^20.15.1",
-    "electron-webpack": "^2.1.2",
-    "electron-webpack-ts": "^2.0.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
     "ts-jest": "^22.4.6",
-    "vue-cli-plugin-electron-builder": "^0.3.2",
+    "vue-cli-plugin-electron-builder": "^1.0.0-alpha.6",
     "vue-template-compiler": "^2.5.16"
   },
   "browserslist": [
@@ -48,23 +44,5 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "electronWebpack": {
-    "renderer": {
-      "sourceDirectory": "src",
-      "webpackConfig": "dist_electron/webpack.renderer.additions.js"
-    },
-    "main": {
-      "webpackConfig": "dist_electron/webpack.main.additions.js"
-    }
-  },
-  "build": {
-    "directories": {
-      "output": "dist_electron"
-    },
-    "files": [
-      "dist/**/*",
-      "node_modules/**/*",
-      "package.json"
-    ]
-  }
+  "main": "dist_electron/bundled/background.js"
 }

@@ -5,21 +5,16 @@ import * as path from 'path';
 import { format as formatUrl } from 'url';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
-process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
 
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow: BrowserWindow | null;
 
 function createMainWindow() {
   const window = new BrowserWindow();
-  window.maximize();
 
   if (isDevelopment) {
     window.webContents.openDevTools();
-  }
-
-  if (isDevelopment) {
-    window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`);
+    window.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);
   } else {
     window.loadURL(
       formatUrl({
